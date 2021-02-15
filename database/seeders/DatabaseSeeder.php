@@ -13,6 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\Recipe::factory()->hasIngredients(3)->hasCategory(2)->count(3)->create();
     }
 }
