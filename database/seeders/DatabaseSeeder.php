@@ -13,6 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Recipe::factory()->hasIngredients(3)->hasCategory(2)->count(3)->create();
+        \App\Models\Recipe::factory()
+            ->hasIngredients(rand(1, 4))
+            ->hasCategory(1)
+            ->hasHowPrepare(rand(1,4))
+            ->count(3)
+            ->create();
     }
 }

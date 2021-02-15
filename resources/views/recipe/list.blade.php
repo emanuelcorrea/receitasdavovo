@@ -8,7 +8,7 @@
                 <article>
                     <header>
                         <div class="receitas-header">
-                            <img class="receitas-img" src="http://receitas.emanuelcorrea.com.br/public/assets/img/receitas/bolo-de-fuba.jpg">
+                            <img class="receitas-img" src="{{ $recipe->img_url }}">
                             <div class="receitas-info">
                                 <h2 style="color: black"><span style="background: black;"></span> {{ $recipe->name }}</h2>
                                 <div>

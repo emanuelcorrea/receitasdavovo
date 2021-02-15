@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Category;
 use App\Models\Ingredient;
+use App\Models\HowPrepare;
 
 class Recipe extends Model
 {
@@ -23,5 +24,10 @@ class Recipe extends Model
     public function ingredients()
     {
         return $this->hasMany(Ingredient::class);
+    }
+
+    public function howPrepare()
+    {
+        return $this->hasMany(HowPrepare::class);
     }
 }
