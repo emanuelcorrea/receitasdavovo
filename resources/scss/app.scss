@@ -13,9 +13,9 @@ html {
 }
 
 body {
-    background-image: url("/img/bg.png");
     background-size: contain;
     background-position: 0 0;
+    background-color: #fff;
     font-family: 'Lora', serif;
     font-size: 13px;
     display: flex;
@@ -72,7 +72,6 @@ label.img {
 
 main .container {
     background-color: #FFF;
-    box-shadow: 0px 0px 1px  rgba(0, 0, 0, 0.445);
 }
 
 .container {
@@ -836,19 +835,10 @@ main .container {
 
 .article ul li,
 .article ol li {
-    color: rgb(56, 56, 56);
-    margin-top: 10px;
-}
-
-.article ul li p,
-.article ol li p {
     color: #333333;
     font-weight: 600;
     font-size: 13px;
-}
-
-.article ol li {
-    font-size: 20px;
+    margin-top: 10px;
 }
 
 /*! Painel */
@@ -1172,6 +1162,74 @@ input[type='radio'] {
     height: 30px;
     margin: 0 auto;
 }
+
+/**
+ *--------------------------------
+ * Profile
+ *--------------------------------
+ */
+@mixin d-flex($direction: column, $justify: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+main.profile {
+    .row {
+        margin-top: 20px;
+
+        > div {
+            @include d-flex;
+            box-shadow: 0px 0px .4rem rgba(0, 0, 0, .12);
+        }
+
+        .profile-user {
+            align-items: center;
+            width: 25%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+            .profile-description {
+                @include d-flex;
+                align-items: center;
+
+                > img.profile-image {
+                    width: 90px;
+                }
+
+                > p.profile-username {
+
+                }
+            }
+
+            .profile-menu {
+                margin-top: 20px;
+                width: 100%;
+                @include d-flex;
+                align-items: center;
+
+                ul {
+                    list-style: none;
+
+                    .profile-link {
+                        width: 100%;
+                        cursor: pointer;
+
+                        a {
+
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .profile-content {
+            width: 75%;
+        }
+    }
+}
+
 
 /*! Footer  */
 

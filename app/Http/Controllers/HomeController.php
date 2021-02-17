@@ -8,24 +8,23 @@ use App\Models\Recipe;
 class HomeController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Show the application dashboard.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function __invoke(Request $request)
+    public function index()
     {
-        $primaryRecipes = Recipe::orderByDesc('id')
+        $recipes = Recipe::select();
+
+        $primaryRecipes = $recipes->orderByDesc('id')
             ->limit(2)->get();
 
-        $secondaryRecipes = Recipe::limit(3)->get();
-
-        $recipes = Recipe::all();
+        $secondaryRecipes = $recipes->limit(3)->get();
 
         return view('home.main', [
             'primaryRecipes' => $primaryRecipes,
             'secondaryRecipes' => $secondaryRecipes,
-            'recipes' => $recipes
+            'recipes' => $recipes->get()
         ]);
     }
 }

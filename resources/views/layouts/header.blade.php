@@ -29,25 +29,42 @@
                     </div>
                 </div>
                 <input type="checkbox" name="check-menu" id="check-menu">
-                <div id="menu-hidden">
-                    <div class="user">
-                        <div class="logo-user">
-                            <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/vovo-feliz.png">
+                @guest
+                    <div id="menu-hidden">
+                        <div class="user">
+                            <div class="logo-user">
+                                <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/vovo-feliz.png">
+                            </div>
                         </div>
+                        <ul>
+                            <li><p>Olá, <span>visitante</span>!</p></li>
+                            <li><a href="{{ url('login') }}" style="text-align: center;">Entrar / Cadastrar</a></li>
+                            <li><a href="#">Suporte <i class="fas fa-envelope-open-text"></i></a></li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li><p>Olá, <span>visitante</span>!</p></li>
-                        <li><a href="#" style="text-align: center;">Entrar / Cadastrar</a></li>
-                        <li><a href="#">Suporte <i class="fas fa-envelope-open-text"></i></a></li>
-                    </ul>
-                </div>
-                {{-- <?php
-                    if (isset($_SESSION['account']['nome'])) {
-                        require("menu-logado.php");
-                    } else {
-                        require("menu-deslogado.php");
-                    }
-                ?> --}}
+                @else
+                    <div id="menu-hidden">
+                        <div class="user">
+                            <div class="logo-user">
+                                <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/vovo-feliz.png" alt="User image">
+                            </div>
+                        </div>
+                        <ul>
+                            <li><p>Olá, <span>{{ Auth::user()->name }}</span>!</p></li>
+                            <li><a href="{{ route('profile') }}">Minha conta <i class="far fa-newspaper"></i></a></li>
+                            <li><a href="#">Minhas receitas <i class="fas fa-book"></i></a></li>
+                            <li><a href="#">Suporte <i class="fas fa-envelope-open-text"></i></a></li>
+                            <li>
+                                <a href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Sair <i class="fas fa-sign-out-alt"></i>
+                                </a>
+                                <form id="logout-form" action="{{ url('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                @endguest
             </div>
         </div>
     </div>
@@ -75,11 +92,10 @@
                         </div>
                         <ul>
                             <li><p>Olá, <span>visitante</span>!</p></li>
-                            <li><a href="#" style="text-align: center;">Entrar / Cadastrar</a></li>
+                            <li><a href="{{ url('login') }}" style="text-align: center;">Entrar / Cadastrar</a></li>
                             <li><a href="#">Suporte <i class="fas fa-envelope-open-text"></i></a></li>
                         </ul>
                     </div>
-                    {{-- <?php require("menu-deslogado.php"); ?> --}}
             </div>
         </div>
     </div>
