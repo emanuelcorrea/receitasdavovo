@@ -7,25 +7,29 @@ use App\Models\Recipe;
 
 class HomeController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke(Request $request)
+    public function __construct()
     {
-        $primaryRecipes = Recipe::orderByDesc('id')
+        $this->middleware('auth', ['except' => 'index']);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        $recipes = Recipe::select();
+
+        $primaryRecipes = $recipes->orderByDesc('id')
             ->limit(2)->get();
 
-        $secondaryRecipes = Recipe::limit(3)->get();
-
-        $recipes = Recipe::all();
+        $secondaryRecipes = $recipes->limit(3)->get();
 
         return view('home.main', [
             'primaryRecipes' => $primaryRecipes,
             'secondaryRecipes' => $secondaryRecipes,
-            'recipes' => $recipes
+            'recipes' => $recipes->get()
         ]);
     }
 }

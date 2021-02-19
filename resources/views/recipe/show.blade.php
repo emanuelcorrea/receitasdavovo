@@ -14,7 +14,7 @@
             </header>
             <div class="media">
                 <div class="media-img">
-                    <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/receitas/bolo-de-fuba.jpg" alt="Receita de Bolo de Cenoura">
+                    <img src="{{ $recipe->img_url }}" alt="Receita de Bolo de Cenoura">
                 </div>
                 <div class="media-content">
                     <div class="ingredients">
@@ -23,25 +23,17 @@
                         </div>
 
                         <ul>
-                            {{-- <?php
-                            // $ingredientes = explode('|', $receita->ingredientes);
-                            // $i = 0;
-
-                            // while ($i < count($ingredientes)): ?>
-                            //     <li><p><?php echo $ingredientes[$i]; ?></p></li>
-                            // <?php $i++; endwhile ?> --}}
+                            @foreach ($recipe->ingredients as $ingredient)
+                                <li>{{ $ingredient->quantity . ' ' . $ingredient->name }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="prepare">
                         <h2 class="subtitle">Modo de preparo</h2>
                         <ol>
-                            <?php
-                            // $preparo = explode('|', $receita->preparo);
-                            // $i = 0;
-                            //     while ($i < count($preparo)): ?>
-                                {{-- <li><p><?php echo $preparo[$i]; ?></p></li> --}}
-
-                            {{-- <?php $i++; endwhile ?> --}}
+                            @foreach ($recipe->howPrepare as $prepare)
+                                <li>{{ $prepare->prepare }}</li>
+                            @endforeach
                         </ol>
                     </div>
                 </div>

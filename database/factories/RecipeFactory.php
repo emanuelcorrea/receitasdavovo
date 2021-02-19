@@ -28,6 +28,7 @@ class RecipeFactory extends Factory
             'name' => $name,
             'description' => $this->faker->paragraph(10),
             'slug' => Str::slug($name, '-'),
+            'img_url' => $this->faker->imageUrl(),
             'created_at' => $this->faker->date,
             'updated_at' => $this->faker->date
         ];

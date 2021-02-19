@@ -23,7 +23,7 @@
                         @foreach ($primaryRecipes as $recipe)
                             <div class="destaque-item">
                                 <a href="{{ $recipe->slug }}">
-                                    <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/receitas/bolo-de-fuba.jpg">
+                                    <img src="{{ $recipe->img_url }}">
                                     <h2>{{ $recipe->name }}</h2>
                                 </a>
                             </div>
@@ -33,7 +33,7 @@
                         @foreach ($secondaryRecipes as $recipe)
                             <div class="destaque-item">
                                 <a href="{{ route('recipe', $recipe->slug) }}">
-                                    <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/receitas/bolo-de-fuba.jpg">
+                                    <img src="{{ $recipe->img_url }}">
                                     <h2>{{ $recipe->name }}</h2>
                                 </a>
                             </div>
@@ -54,7 +54,7 @@
                 </header>
                 <div class="media">
                     <div class="media-img">
-                        <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/receitas/bolo-de-fuba.jpg" alt="Receita de Bolo de Cenoura">
+                        <img src="{{ $recipe->img_url }}" alt="Receita de Bolo de Cenoura">
                     </div>
                     <div class="media-content">
                         <div class="ingredients">
@@ -62,28 +62,20 @@
                                 <h2 class="subtitle">Ingredientes</h2>
                             </div>
 
-                            {{-- <ul>
-                                <?php
-                                $ingredientes = explode('|', $index);
-                                $i = 0;
-
-                                while ($i < count($ingredientes)): ?>
-                                    <li><p><?php echo $ingredientes[$i]; ?></p></li>
-                                <?php $i++; endwhile ?>
-                            </ul> --}}
+                            <ul>
+                                @foreach ($recipe->ingredients as $ingredient)
+                                    <li>{{ $ingredient->quantity . ' ' . $ingredient->name }}</li>
+                                @endforeach
+                            </ul>
                         </div>
                         <div class="prepare">
                             <div class="titlo">
                                 <h2 class="subtitle">Modo de preparo</h2>
                             </div>
                             <ol>
-                                {{-- <?php
-                                $preparo = explode('|', $receita->preparo);
-                                $i = 0;
-                                    while ($i < count($preparo)): ?>
-                                    <li><p><?php echo $preparo[$i]; ?></p></li>
-
-                                <?php $i++; endwhile ?> --}}
+                                @foreach ($recipe->howPrepare as $prepare)
+                                    <li>{{ $prepare->prepare }}</li>
+                                @endforeach
                             </ol>
                         </div>
                     </div>

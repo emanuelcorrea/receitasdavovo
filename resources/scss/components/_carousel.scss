@@ -1,0 +1,169 @@
+/*! Banner  */
+
+#slider {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: absolute;
+}
+
+#slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+#slide:nth-child(1) {
+    animation-delay: -1s;
+    background-image: url("/img/banner5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#slide:nth-child(2) {
+    animation-delay: 2s;
+    background-image: url("/img/banner2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#slide:nth-child(3) {
+    animation-delay: 5s;
+    background-image: url("/img/banner3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#slide:nth-child(4) {
+    animation-delay: 8s;
+    background-image: url("/img/banner5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#slide p {
+    font-family: Comfortaa;
+    font-size: 70px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 340px;
+    color: #fff;
+}
+
+@keyframes slide {
+    0% {
+        left: 100%;
+        width: 100%;
+    }
+
+    5% {
+        left: 0%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    30% {
+        left: 0%;
+        width: 100%;
+    }
+
+    30.0001% {
+        left: -100%;
+        width: 0%;
+    }
+
+    100% {
+        left: 0%;
+        width: 0%;
+    }
+}
+
+
+/*! Banner  */
+
+.banner {
+    height: 788px;
+    position: relative;
+}
+
+
+@keyframes changeText {
+    0% {
+        content: 'Texto 5';
+    }
+
+    25% {
+        content: 'Texto 2';
+    }
+
+    50% {
+        content: 'Texto 3';
+    }
+
+    75% {
+        content: 'Texto 4';
+    }
+
+    100% {
+        content: 'Texto 5';
+    }
+
+}
+
+@keyframes slidershow {
+    0% {
+        background: linear-gradient(45deg, rgba(179, 179, 179, 0.356), rgba(0, 0, 0, 0.226)), url("/img/banner5.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    25% {
+        background: linear-gradient(45deg, rgba(179, 179, 179, 0.356), rgba(0, 0, 0, 0.226)), url("/img/banner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    50% {
+        background: linear-gradient(45deg, rgba(179, 179, 179, 0.356), rgba(0, 0, 0, 0.226)), url("/img/banner3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    75% {
+        background: linear-gradient(45deg, rgba(179, 179, 179, 0.356), rgba(0, 0, 0, 0.226)), url("/img/banner4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    100% {
+        background: linear-gradient(45deg, rgba(179, 179, 179, 0.356), rgba(0, 0, 0, 0.226)), url("/img/banner5.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.banner #mulher {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    background: url("/img/wave.png") top center;
+    height: 8px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
