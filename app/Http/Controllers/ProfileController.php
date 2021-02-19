@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Show the profile user dashboard.
      *
@@ -13,6 +18,6 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile.main');
+        return view('profile.my-recipes');
     }
 }

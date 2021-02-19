@@ -14,17 +14,23 @@
                     <nav>
                         <ul>
                             <li class="profile-link">
-                                <a href="#">Meus dados</a>
+                                <a href="#">
+                                    <i class="fas fa-book-open"></i>
+                                    Minhas receitas
+                                </a>
                             </li>
                             <li class="profile-link">
-                                <a href="#">Minhas receitas</a>
+                                <a href="#">
+                                    <i class="fas fa-book"></i>
+                                    Meus dados
+                                </a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <div class="profile-content">
-                conteudo
+                @yield('profile-content')
             </div>
         </div>
     </div>
