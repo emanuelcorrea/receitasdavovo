@@ -1,0 +1,104 @@
+/*! Register  */
+
+.account .container > .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.account div.login,
+.account div.register {
+    margin: 40px 0;
+    padding-bottom: 40px;
+    width: 800px;
+    border: 1px solid #00000025;
+}
+
+div.register {
+    border: 1px solid #00000025;
+}
+
+.form-content h2 {
+    text-transform: uppercase;
+    font-family: 'Roboto Mono';
+    letter-spacing: 1px;
+}
+
+.form-content p {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"] {
+    width: 350px !important;
+    outline-color: $primary-bg__color;
+}
+
+.or {
+    margin-left: 90px;
+}
+
+.or h2 {
+    color: #99999978;
+    background: none;
+    text-transform: uppercase;
+}
+
+.or::before {
+    margin-left: -100%;
+    margin-right: 10px;
+}
+
+.or::after {
+    margin-right: -100%;
+    margin-left: 10px;
+}
+
+.or::before,
+.or::after {
+    content: '';
+    width: 30%;
+    border-bottom: 1px solid #99999978;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main.login .titulo {
+    padding-bottom: 0;
+}
+
+
+main.register .titulo {
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+main.register input[type='submit'] {
+    margin-bottom: 150px;
+}
+
+main.register .sexo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: 30px auto;
+}
+
+main.register .sexo label {
+    margin: 15px 0;
+}
+
+main.register .sexo .row .col {
+    margin-right: 15px;
+}
+
+input[type='radio'] {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
