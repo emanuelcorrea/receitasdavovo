@@ -16,13 +16,19 @@
         align-content: center;
     }
 
-    /* Logo */
+    /**
+    * Logo
+    * -----------------------------------------
+    */
 
     &__logo img {
         width: 140px;
     }
 
-    /* Search */
+    /**
+    * Input search
+    * -----------------------------------------
+    */
 
     &__search form {
         @include d-flex(row);
@@ -56,7 +62,10 @@
         }
     }
 
-    /* Options - Nav & Menu */
+    /**
+    * Options (Nav & Menu hidden)
+    * -----------------------------------------
+    */
 
     &__options {
         @include d-flex(row, space-between);
@@ -212,9 +221,10 @@
     }
 }
 
-/*! Menu-hidden  */
-
-/*! Menu-fixed  */
+/**
+ * Menu fixed
+ * -----------------------------------------
+ */
 
 #menu-fixed {
     position: fixed;
@@ -228,29 +238,8 @@
     padding: 10px 0;
 }
 
-@keyframes fade {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
 #check-menu:checked ~ #menu-hidden {
     display: block;
     right: 0;
     opacity: 1;
-}
-
-.icon {
-    display: block;
 }

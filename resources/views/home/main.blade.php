@@ -43,9 +43,9 @@
             </article>
         </section>
         @foreach ($recipes as $recipe)
-            <article id="post{{ $recipe->id }}" class="article">
-                <header>
-                    <div class="titulo">
+            <article id="post{{ $recipe->id }}" class="recipe">
+                <header class="header__header">
+                    <div class="recipe__title">
                         <h1 class="title">{{ $recipe->name }}</h1>
                     </div>
                     <span class="arrow">
