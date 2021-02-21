@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Harman Retro';
+    src: url('/fonts/Harman-Retro-webfont.eot');
+    src: url('/fonts/Harman-Retro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Harman-Retro-webfont.woff2') format('woff2'),
+         url('/fonts/Harman-Retro-webfont.woff') format('woff'),
+         url('/fonts/Harman-Retro-webfont.ttf') format('truetype'),
+         url('/fonts/Harman-Retro-webfont.svg#harmanretro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Harman Simple';
+    src: url('/fonts/Harman-Simple-webfont.eot');
+    src: url('/fonts/Harman-Simple-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Harman-Simple-webfont.woff2') format('woff2'),
+         url('/fonts/Harman-Simple-webfont.woff') format('woff'),
+         url('/fonts/Harman-Simple-webfont.ttf') format('truetype'),
+         url('/fonts/Harman-Simple-webfont.svg#harmansimple') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century';
+    src: url('/fonts/CenturySchoolbook-Regular-webfont.eot');
+    src: url('/fonts/CenturySchoolbook-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.woff2') format('woff2'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.woff') format('woff'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.svg#century_schoolbook_fsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+}
+
+h2 {
+
+}
+
+/**
+ * Recipe
+ * --------------------------------------
+ */
+
+.recipe {
+    font-family: 'Century';
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: normal;
+
+    &__title {
+        text-align: center;
+
+        h1,
+        h2 {
+            font-family: 'Harman Retro';
+            font-size: 32px;
+            font-weight: normal;
+            text-transform: lowercase;
+            color: #fff;
+        }
+
+        h2 {
+            font-family: 'Harman Simple';
+            font-size: 22px
+        }
+    }
+}

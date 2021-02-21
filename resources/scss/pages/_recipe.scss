@@ -1,0 +1,56 @@
+.recipe {
+    @include d-flex(column, center);
+    align-items: center;
+    padding-top: 70px;
+    background-color: #fff;
+
+    &__title {
+        position: relative;
+
+        $self: &;
+
+        h1,
+        h2 {
+            display: inline-block;
+            background-color: #E45954;
+            padding: 5px 15px;
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            width: 20%;
+            border-bottom: 1px solid #b13636d1;
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        &::before {
+            margin-left: -100%;
+            margin-right: 10px;
+        }
+
+        &::after {
+            margin-right: -100%;
+            margin-left: 10px;
+        }
+    }
+
+    &__image img {
+        margin-top: 70px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 3px #555555;
+        width: 710px;
+        height: 400px;
+    }
+
+    &__body {
+        @include d-flex(column, center);
+        width: 710px;
+    }
+
+    &__ingredients {
+
+    }
+}

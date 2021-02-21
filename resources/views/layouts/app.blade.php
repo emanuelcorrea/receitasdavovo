@@ -50,7 +50,7 @@
                 }
 
                 if (scroll < 250) {
-                    document.getElementById("menu-fixed").style.top = "-100px";
+                    document.getElementById("menu-fixed").style.top = "-150px";
                     document.getElementById("menu-hidden").style.top = "0px";
                 }
             }

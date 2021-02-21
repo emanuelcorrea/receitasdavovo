@@ -116,23 +116,6 @@ label.img {
   margin-bottom: 54px;
 }
 
-.titulo h1,
-.titulo h2 {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  background-color: #E45954;
-  padding: 5px;
-}
-
-.title {
-  background-color: #E45954;
-  padding: 5px;
-  display: inline-block;
-  margin: 0 auto;
-  color: #FFF;
-}
-
 .titulo > .subtitle {
   background-color: #A8C76D !important;
 }
@@ -761,52 +744,11 @@ label.img {
 }
 
 /*! Articles */
-.article {
-  padding-top: 50px;
-}
-
-.article header h1 {
-  font-family: "Karla", sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-  color: #fff;
-}
-
-.article .arrow {
-  display: flex;
-  justify-content: center;
-}
-
-.article .media {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.article .media-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.article .media-img img {
-  border-radius: 3px;
-  box-shadow: 0px 0px 3px #555555;
-  width: 710px;
-  height: 400px;
-}
-
-.article .media-content {
-  width: 700px;
-  justify-content: right;
-}
-
-.article:last-child {
+.recipe:last-child {
   padding-bottom: 50px;
 }
 
-.article .ingredients h2::after {
+.recipe .ingredients h2::after {
   content: "";
   font-family: Font;
   font-family: "Font Awesome 5 Free";
@@ -815,11 +757,11 @@ label.img {
   margin-left: 10px;
 }
 
-.article .prepare h2 {
+.recipe .prepare h2 {
   background-color: #FFAE00;
 }
 
-.article .prepare h2::after {
+.recipe .prepare h2::after {
   content: "";
   font-family: Font;
   font-family: "Font Awesome 5 Free";
@@ -828,14 +770,14 @@ label.img {
   margin-left: 10px;
 }
 
-.article ul,
-.article ol {
+.recipe ul,
+.recipe ol {
   margin-top: 30px;
   margin-left: 20px;
 }
 
-.article ul li,
-.article ol li {
+.recipe ul li,
+.recipe ol li {
   color: #333333;
   font-weight: 600;
   font-size: 13px;
