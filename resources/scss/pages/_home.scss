@@ -1,121 +1,7 @@
-.destaques {
-    h2 {
-        margin: 30px 0
-    }
-
-    a {
-        text-decoration: none
-    }
-}
-
-.destaque {
-    @include d-flex(row, center);
-    align-items: center;
-    text-align: center;
-}
-
-.destaque-full {
-    @include d-flex(row, space-around);
-    width: 100%;
-}
-
-.destaque-item {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-
-    img {
-        border: 1px solid #FFF;
-        box-shadow: 0px 0px 5px #555555;
-    }
-
-    h2 {
-        margin-top: 10px;
-    }
-}
-
-.destaque-grande {
-    .destaque-item {
-        margin-bottom: 38px;
-    }
-
-    img {
-        width: 475px;
-        height: 267.594px;
-    }
-}
-
-.destaque-pequeno {
-    margin-left: -350px;
-
-    .destaque-item img {
-        width: 300px;
-        height: 169px;
-    }
-}
-
-.titulo {
-    font-family: "Oswald-Lighter", "Helvetica Neue", Helvetica, Arial;
-    font-weight: 300;
-    font-size: 20px;
-    text-align: center;
-    color: #000000d1;
-    overflow: hidden;
-    text-transform: uppercase;
-    background-color: #fff;
-    margin-top: 50px;
-    padding: 6px;
-}
-
-.titulo::before {
-    margin-left: -100%;
-    margin-right: 10px;
-}
-
-.titulo::after {
-    margin-right: -100%;
-    margin-left: 10px;
-}
-
-.titulo::before,
-.titulo::after {
-    content: '';
-    width: 10%;
-    border-bottom: 1px solid #b13636d1;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.destaques .titulo {
-    margin-bottom: 54px;
-}
-
-.titulo h1,
-.titulo h2 {
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    background-color: #E45954;
-    padding: 5px;
-}
-
-.title {
-    background-color: #E45954;
-    padding: 5px;
-    display: inline-block;
-    margin: 0 auto;
-    color: #FFF;
-}
-
-.br {
-    text-align: center;
-}
-
-.br i {
-    margin: 50px 0 5px;
-    font-size: 50px;
-    color: rgb(95, 95, 95);
-}
+/**
+ * News (destaques)
+ * ------------------------------------
+ */
 
 .news {
     $news: &;
@@ -173,8 +59,6 @@
         }
 
         &__image {
-            margin-bottom: 10px;
-
             img {
                 width: 710px;
                 height: 400px;
@@ -186,7 +70,7 @@
         &__title {
             h2 {
                 position: relative;
-                margin-bottom: 10px;
+                margin: 15px 0 15px;
                 margin-left: 10px;
 
                 &::before {
@@ -211,7 +95,7 @@
 
         &:hover {
             img {
-                transform: scale(1.01);
+                transform: scale(1.005);
             }
         }
     }
@@ -221,7 +105,7 @@
             @include d-flex(row, initial);
             cursor: pointer;
             transition: 0.3s color ease;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-decoration: none;
             transition: 0.3s transform ease;
             box-shadow: 0px 3px .3rem rgba(0, 0, 0, 0.3);
@@ -277,4 +161,13 @@
             margin-right: 15px;
         }
     }
+}
+
+/**
+ * Categories
+ * ------------------------------------
+ */
+
+.categories {
+
 }

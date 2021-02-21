@@ -42,17 +42,17 @@
             height: 50px;
         }
 
-        input#search {
+        input[type="search"] {
             width: 400px;
             padding-left: 15px;
             font-size: 16px;
-            color: rgb(56, 56, 56);
+            color: $primary-font__color;
         }
 
-        button#submit {
+        button[type="submit"] {
             width: 60px;
             cursor: pointer;
-            background-color: #E45954;
+            background-color: $primary-bg__color;
             color: #FFF;
             border-radius: 0 3px 3px 0;
 
@@ -105,13 +105,13 @@
             background-color: #FFF;
             animation: fade 0.5s ease-out;
             box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.322);
-            background-color: $primary-bg__color;
+            background-color: $primary-header-bg__color;
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e45954' fill-opacity='0.12' fill-rule='evenodd'/%3E%3C/svg%3E");
             transition: .39s ease;
 
             &__icon label {
                 padding: 12px 20px;
-                color: #E45954;
+                color: $primary-bg__color;
                 font-size: 20px;
                 cursor: pointer;
                 background-color: #FFF;

@@ -62,7 +62,7 @@ body {
     .news-primary {
         &__item {
             &:visited {
-                color: hsl(210, 3%, 38%);
+                color: $primary-font__color
             }
         }
 
@@ -95,7 +95,7 @@ body {
 
         &__item {
             &:visited {
-                color: hsl(210, 3%, 38%);
+                color: $primary-font__color;
             }
 
             &:hover {

@@ -9,8 +9,8 @@
             <div class="header__search">
                 <form action="{{ url('/') }}" method="GET">
                     @csrf
-                    <input type="search" name="search" id="search" placeholder="Procure por uma receita">
-                    <button type="submit" name="submit" id="submit">
+                    <input type="search" name="search" placeholder="Procure por uma receita">
+                    <button type="submit" name="submit">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
@@ -103,8 +103,8 @@
                 <div class="header__search">
                     <form action="{{ url('/') }}" method="GET">
                         @csrf
-                        <input type="search" name="search" id="search" placeholder="Procure por uma receita">
-                        <button type="submit" name="submit" id="submit">
+                        <input type="search" name="search" placeholder="Procure por uma receita">
+                        <button type="submit" name="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
