@@ -5,40 +5,75 @@
     <div class="container">
         <section class="banner">
             <div id="slider">
-                <div id="slide"><p>Oi</p></div>
-                <div id="slide"><p>OI2</p></div>
-                <div id="slide"><p>OI3</p></div>
-                <div id="slide"><p>Oi4</p></div>
+                <div id="slide"><p>Titulo 1</p></div>
+                <div id="slide"><p>Titulo 2</p></div>
+                <div id="slide"><p>Titulo 3</p></div>
+                <div id="slide"><p>Titulo 4</p></div>
             </div>
         </section>
-        <section class="destaques">
-            <div class="titulo">
-                <h2 class="title">Destaques</h2>
+        <section class="news">
+            <div class="news__title">
+                <h2>Destaques</h2>
             </div>
-            <article class="destaque">
-                <div class="destaque-full">
-                    <div class="destaque-grande">
-                        @foreach ($primaryRecipes as $recipe)
-                            <div class="destaque-item">
-                                <a href="{{ $recipe->slug }}">
-                                    <img src="{{ $recipe->img_url }}">
-                                    <h2>{{ $recipe->name }}</h2>
-                                </a>
+            <div class="news__recipes">
+                <div class="news-primary">
+                    <a href="{{ url('dr-sydney-wehner-iii') }}" class="news-primary__item">
+                        <div class="news-primary__header">
+                            <div class="news-primary__image">
+                                <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/receitas/quentao-de-vinho.jpg" alt="Quentão de Vinho" title="Destaque: Quentão de Vinho">
                             </div>
-                        @endforeach
-                    </div>
-                    <div class="destaque-pequeno">
-                        @foreach ($secondaryRecipes as $recipe)
-                            <div class="destaque-item">
-                                <a href="{{ route('recipe', $recipe->slug) }}">
-                                    <img src="{{ $recipe->img_url }}">
-                                    <h2>{{ $recipe->name }}</h2>
-                                </a>
+                            <div class="news-primary__title">
+                                <h2>Quentão de Vinho</h2>
                             </div>
-                        @endforeach
-                    </div>
+                        </div>
+                        <div class="news-primary__body">
+                            <div class="news-primary__description">
+                                <p>Quentão e vinho quente são duas coisas que não podem faltar no inverno (especialmente se você vai organizar uma Festa Junina).</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </article>
+                <div class="news-last">
+                    <nav>
+                        <ul>
+                            @foreach ($lastRecipes as $recipe)
+                            <li>
+                                <a class="news-last__item" href="{{ route('recipe', $recipe->slug) }}">
+                                    <div class="news-last__header">
+                                        <div class="news-last__image">
+                                            <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/receitas/quentao-de-vinho.jpg" alt="{{ $recipe->name }}">
+                                        </div>
+                                    </div>
+                                    <div class="news-last__body">
+                                        <div class="news-last__title">
+                                            <h3>{{ $recipe->name }}</h3>
+                                        </div>
+                                        <div class="news-last__prepare">
+                                            <div class="news-last__time">
+                                                <i class="far fa-clock"></i>
+                                                <p>40min</p>
+                                            </div>
+                                            <div class="news-last__portions">
+                                                <i class="far fa-grin-beam"></i>
+                                                <p>2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </nav>
+                    {{-- @foreach ($newsRecipes as $recipe)
+                        <div class="news__item">
+                            <a href="{{ $recipe->slug }}">
+                                <img src="{{ $recipe->img_url }}">
+                                <h2>{{ $recipe->name }}</h2>
+                            </a>
+                        </div>
+                    @endforeach --}}
+                </div>
+            </div>
         </section>
         @foreach ($recipes as $recipe)
             <article class="recipe">

@@ -21,14 +21,9 @@ class HomeController extends Controller
     {
         $recipes = Recipe::select();
 
-        $primaryRecipes = $recipes->orderByDesc('id')
-            ->limit(2)->get();
-
-        $secondaryRecipes = $recipes->limit(3)->get();
-
         return view('home.main', [
-            'primaryRecipes' => $primaryRecipes,
-            'secondaryRecipes' => $secondaryRecipes,
+            'newsRecipe' => $recipes->limit(1)->get(),
+            'lastRecipes' => $recipes->limit(3)->get(),
             'recipes' => $recipes->get()
         ]);
     }

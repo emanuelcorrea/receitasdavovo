@@ -37,11 +37,79 @@
 body {
     font-family: 'Lora', serif;
     font-size: 13px;
+    color: $primary-font__color;
 }
 
-h2 {
+/**
+ * News
+ * --------------------------------------
+ */
 
-}
+ .news {
+    &__title {
+        text-align: center;
+
+        h1,
+        h2 {
+            font-family: 'Harman Retro';
+            font-size: 32px;
+            font-weight: normal;
+            text-transform: lowercase;
+            color: hsl(0, 0%, 100%);
+        }
+    }
+
+    .news-primary {
+        &__item {
+            &:visited {
+                color: hsl(210, 3%, 38%);
+            }
+        }
+
+        &__title {
+            h2 {
+                font-family: 'Harman Retro';
+                font-size: 28px;
+                font-weight: normal;
+                text-transform: lowercase;
+                color: $primary-font__color;
+            }
+        }
+
+
+        &__description {
+            p {
+                font-family: 'Century';
+                font-size: 18px;
+                font-weight: normal;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .news-last {
+        font-family: 'Harman Retro';
+        font-weight: normal;
+        text-transform: lowercase;
+        text-align: center;
+
+        &__item {
+            &:visited {
+                color: hsl(210, 3%, 38%);
+            }
+
+            &:hover {
+                color: $primary-btn-bg__color;
+            }
+        }
+
+        &__time,
+        &__portions {
+            font-size: 15px;
+        }
+
+    }
+ }
 
 /**
  * Recipe
@@ -58,7 +126,7 @@ h2 {
             font-size: 32px;
             font-weight: normal;
             text-transform: lowercase;
-            color: #fff;
+            color: hsl(0, 0%, 100%);
         }
     }
 
@@ -68,8 +136,8 @@ h2 {
             font-size: 22px;
             font-weight: bold;
             text-align: center;
-            text-shadow: 1px 1px 1px #33333375;
-            color: #fff;
+            text-shadow: 1px 1px 1px hsla(0, 0%, 20%, 0.459);
+            color: hsl(0, 0%, 100%);
         }
     }
 
@@ -80,7 +148,7 @@ h2 {
             font-size: 18px;
             font-weight: normal;
             line-height: 28px;
-            color: #5D6063;
         }
     }
 }
+

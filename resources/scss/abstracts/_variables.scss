@@ -1,9 +1,11 @@
 // Colors
-$primary-bg__color: #fd9a9a;
-$primary-body-bg__color: #fcfcfc;
-$primary-font__color:  #343434;
+$primary-bg__color: hsl(0, 96%, 80%);
+$primary-body-bg__color: hsl(0, 0%, 99%);
+
+// Fonts
+$primary-font__color:  hsl(210, 3%, 38%);
 $primary-selection-bg__color: rgba(228, 53, 53, 0.534);
 
 // Forms
-$primary-btn-bg__color: rgb(202, 49, 95);
-$primary-btn-bg__color_hover: rgb(201, 77, 114);
+$primary-btn-bg__color: hsl(342, 61%, 49%);
+$primary-btn-bg__color_hover: hsl(342, 53%, 55%);

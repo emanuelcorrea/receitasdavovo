@@ -117,27 +117,164 @@
     color: rgb(95, 95, 95);
 }
 
+.news {
+    $news: &;
 
-/*! Articles */
+    @include d-flex(column, center);
+    align-items: center;
+    padding-top: 70px;
+    background-color: hsl(0, 0%, 100%);
 
-.recipe .ingredients h2::after {
-    content: '\f564';
-    font-family: Font ;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #fff;
-    margin-left: 10px;
-}
+    &__title {
+        $self: &;
 
-.recipe .prepare h2 {
-    background-color: #FFAE00;
-}
+        position: relative;
+        margin-bottom: 70px;
 
-.recipe .prepare h2::after {
-    content: '\f560';
-    font-family: Font ;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #fff;
-    margin-left: 10px;
+        h1,
+        h2 {
+            display: inline-block;
+            background-color: hsl(2, 73%, 61%);
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            width: 60%;
+            border-bottom: 1px solid hsla(0, 53%, 45%, 0.82);
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        &::before {
+            margin-left: -100%;
+            margin-right: 10px;
+        }
+
+        &::after {
+            margin-right: -100%;
+            margin-left: 10px;
+        }
+    }
+
+    &__recipes {
+        @include d-flex(row, space-between);
+    }
+
+    .news-primary {
+        width: 735px;
+
+        &__item,
+        &__header  {
+            @include d-flex(column, flex-start);
+        }
+
+        &__image {
+            margin-bottom: 10px;
+
+            img {
+                width: 710px;
+                height: 400px;
+                border-radius: 30px;
+                transition: 0.3s transform ease;
+            }
+        }
+
+        &__title {
+            h2 {
+                position: relative;
+                margin-bottom: 10px;
+                margin-left: 10px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    height: 100%;
+                    width: 5px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: $primary-btn-bg__color
+                }
+            }
+        }
+
+        &__description {
+            p {
+                padding: 0 10px;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.01);
+            }
+        }
+    }
+
+    .news-last {
+        &__item {
+            @include d-flex(row, initial);
+            cursor: pointer;
+            transition: 0.3s color ease;
+            margin-bottom: 15px;
+            text-decoration: none;
+            transition: 0.3s transform ease;
+            box-shadow: 0px 3px .3rem rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+
+            &:not(:nth-last-child(1)) {
+                margin-bottom: 10px;
+            }
+
+            &:hover {
+                transform: scale(1.006);
+            }
+        }
+
+        &__header {
+            height: 150px;
+        }
+
+        &__image {
+            img {
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+
+        &__body {
+            @include d-flex(column, center);
+            padding: 10px;
+            background-color: #fcfcfc;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            width: 250px;
+        }
+
+        &__prepare,
+        &__time,
+        &__portions {
+            @include d-flex(row, center);
+
+            i {
+                margin-right: 5px;
+            }
+        }
+
+        &__prepare {
+            margin-top: 20px;
+        }
+
+        &__time {
+            margin-right: 15px;
+        }
+    }
 }
