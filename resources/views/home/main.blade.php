@@ -15,8 +15,6 @@
             <div class="titulo">
                 <h2 class="title">Destaques</h2>
             </div>
-            {{-- <?php $data = $this->model->selectObject(); ?> --}}
-
             <article class="destaque">
                 <div class="destaque-full">
                     <div class="destaque-grande">
@@ -43,44 +41,39 @@
             </article>
         </section>
         @foreach ($recipes as $recipe)
-            <article id="post{{ $recipe->id }}" class="recipe">
+            <article class="recipe">
                 <header class="header__header">
                     <div class="recipe__title">
-                        <h1 class="title">{{ $recipe->name }}</h1>
+                        <h2>{{ $recipe->name }}</h2>
                     </div>
-                    <span class="arrow">
-                        <img src="/img/arrows.png">
-                    </span>
-                </header>
-                <div class="media">
-                    <div class="media-img">
+                    <div class="recipe__image">
                         <img src="{{ $recipe->img_url }}" alt="Receita de Bolo de Cenoura">
                     </div>
-                    <div class="media-content">
-                        <div class="ingredients">
-                            <div class="titulo">
-                                <h2 class="subtitle">Ingredientes</h2>
-                            </div>
+                </header>
+                <div class="recipe__body">
+                    <div class="recipe__ingredients">
+                        <div class="recipe__subtitle">
+                            <h2>Ingredientes</h2>
+                        </div>
 
-                            <ul>
-                                @foreach ($recipe->ingredients as $ingredient)
-                                    <li>{{ $ingredient->quantity . ' ' . $ingredient->name }}</li>
-                                @endforeach
-                            </ul>
+                        <ul>
+                            @foreach ($recipe->ingredients as $ingredient)
+                                <li>{{ $ingredient->quantity . ' ' . $ingredient->name }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="recipe__instructions">
+                        <div class="recipe__subtitle">
+                            <h2>Modo de preparo</h2>
                         </div>
-                        <div class="prepare">
-                            <div class="titlo">
-                                <h2 class="subtitle">Modo de preparo</h2>
-                            </div>
-                            <ol>
-                                @foreach ($recipe->howPrepare as $prepare)
-                                    <li>{{ $prepare->prepare }}</li>
-                                @endforeach
-                            </ol>
-                        </div>
+                        <ol>
+                            @foreach ($recipe->howPrepare as $prepare)
+                                <li>{{ $prepare->prepare }}</li>
+                            @endforeach
+                        </ol>
                     </div>
                 </div>
-                <div class="br">
+                <div class="recipe__icon">
                     <i class="fas fa-utensils"></i>
                 </div>
             </article>

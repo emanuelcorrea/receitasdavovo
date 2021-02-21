@@ -49,11 +49,6 @@ h2 {
  */
 
 .recipe {
-    font-family: 'Century';
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: normal;
-
     &__title {
         text-align: center;
 
@@ -65,10 +60,27 @@ h2 {
             text-transform: lowercase;
             color: #fff;
         }
+    }
 
+    &__subtitle {
         h2 {
             font-family: 'Harman Simple';
-            font-size: 22px
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 1px 1px 1px #33333375;
+            color: #fff;
+        }
+    }
+
+    ul,
+    ol {
+        li {
+            font-family: 'Century';
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 28px;
+            color: #5D6063;
         }
     }
 }

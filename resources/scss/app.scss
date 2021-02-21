@@ -122,20 +122,6 @@ label.img {
     margin-bottom: 54px;
 }
 
-.titulo > .subtitle {
-    background-color: #A8C76D !important;
-}
-
-.subtitle {
-    font-size: 22px;
-    color: #fff;
-    font-family: 'Karla', sans-serif;
-    text-shadow: 1px 1px 1px #33333375;
-    text-align: center;
-    margin: 30px auto;
-    padding: 5px;
-}
-
 .br {
     text-align: center;
 }
@@ -719,10 +705,6 @@ label.img {
 
 /*! Articles */
 
-.recipe:last-child {
-    padding-bottom: 50px;
-}
-
 .recipe .ingredients h2::after {
     content: '\f564';
     font-family: Font ;
@@ -743,20 +725,6 @@ label.img {
     font-weight: 900;
     color: #fff;
     margin-left: 10px;
-}
-
-.recipe ul,
-.recipe ol {
-    margin-top: 30px;
-    margin-left: 20px;
-}
-
-.recipe ul li,
-.recipe ol li {
-    color: #333333;
-    font-weight: 600;
-    font-size: 13px;
-    margin-top: 10px;
 }
 
 /*! Painel */
