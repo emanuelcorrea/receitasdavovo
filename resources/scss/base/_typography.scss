@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Harman Retro';
+    src: url('/fonts/Harman-Retro-webfont.eot');
+    src: url('/fonts/Harman-Retro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Harman-Retro-webfont.woff2') format('woff2'),
+         url('/fonts/Harman-Retro-webfont.woff') format('woff'),
+         url('/fonts/Harman-Retro-webfont.ttf') format('truetype'),
+         url('/fonts/Harman-Retro-webfont.svg#harmanretro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Harman Simple';
+    src: url('/fonts/Harman-Simple-webfont.eot');
+    src: url('/fonts/Harman-Simple-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Harman-Simple-webfont.woff2') format('woff2'),
+         url('/fonts/Harman-Simple-webfont.woff') format('woff'),
+         url('/fonts/Harman-Simple-webfont.ttf') format('truetype'),
+         url('/fonts/Harman-Simple-webfont.svg#harmansimple') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century';
+    src: url('/fonts/CenturySchoolbook-Regular-webfont.eot');
+    src: url('/fonts/CenturySchoolbook-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.woff2') format('woff2'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.woff') format('woff'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/CenturySchoolbook-Regular-webfont.svg#century_schoolbook_fsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Harman Sans';
+    src: url('/fonts/Harman-Sans-webfont.eot');
+    src: url('/fonts/Harman-Sans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Harman-Sans-webfont.woff2') format('woff2'),
+         url('/fonts/Harman-Sans-webfont.woff') format('woff'),
+         url('/fonts/Harman-Sans-webfont.ttf') format('truetype'),
+         url('/fonts/Harman-Sans-webfont.svg#harmansans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    color: $primary-font__color;
+}
+
+/**
+ * Any element that contains __title in the class name
+ * --------------------------------
+ */
+
+div[class*="__title"] {
+    * {
+        font-family: 'Harman Retro';
+        font-weight: normal;
+        text-transform: lowercase;
+        color: $primary-font__color;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+/**
+ * Any element that contains __subtitle in the class name
+ * --------------------------------
+ */
+
+div[class*="__subtitle"] {
+    * {
+        font-family: 'Harman Simple';
+        text-align: center;
+        color: $primary-font__color
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/**
+ * News
+ * --------------------------------------
+ */
+
+ .news {
+    &__title {
+        text-align: center;
+
+        h2 {
+            color: hsl(0, 0%, 100%);
+        }
+    }
+
+    .news-primary {
+        &__item {
+            &:visited {
+                color: $primary-font__color
+            }
+        }
+
+        &__description {
+            p {
+                font-family: 'Century';
+                font-size: 18px;
+                font-weight: normal;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .news-last {
+        font-family: 'Harman Retro';
+        font-weight: normal;
+        text-transform: lowercase;
+        text-align: center;
+
+        &__item {
+            &:visited {
+                color: $primary-font__color;
+            }
+
+            &:hover {
+                color: $primary-btn-bg__color;
+            }
+        }
+
+        &__time,
+        &__portions {
+            font-size: 15px;
+        }
+
+    }
+ }
+
+/**
+ * Recipe
+ * --------------------------------------
+ */
+
+.recipe {
+    &__title {
+        text-align: center;
+
+        h1,
+        h2 {
+            color: hsl(0, 0%, 100%);
+        }
+    }
+
+    ul,
+    ol {
+        li {
+            font-family: 'Century';
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 28px;
+        }
+    }
+}
+
+/**
+ * Login
+ * --------------------------------------
+ */
+
+.login,
+.register {
+    &__title {
+        text-align: center;
+    }
+}
+
+.login-content {
+    &__or {
+        color: hsl(15, 9%, 83%);
+    }
+
+    .login {
+        &__form {
+            input:not([type="submit"]) {
+                font-family: 'Roboto';
+                font-weight: normal;
+                font-size: 16px;
+                color: $primary-font__color;
+            }
+        }
+    }
+
+    .register {
+        &__subtitle {
+            p {
+                font-weight: normal;
+                font-family: 'Roboto';
+                font-size: 16px;
+            }
+        }
+    }
+}

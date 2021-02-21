@@ -1,0 +1,123 @@
+.recipe {
+    $recipe: &;
+
+    @include d-flex(column, center);
+    align-items: center;
+    padding-top: 70px;
+    background-color: hsl(0, 0%, 100%);
+
+    &__title {
+        $self: &;
+
+        position: relative;
+
+        h1,
+        h2 {
+            display: inline-block;
+            background-color: hsl(2, 73%, 61%);
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            width: 20%;
+            border-bottom: 1px solid hsla(0, 53%, 45%, 0.82);
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        &::before {
+            margin-left: -100%;
+            margin-right: 10px;
+        }
+
+        &::after {
+            margin-right: -100%;
+            margin-left: 10px;
+        }
+    }
+
+    &__ingredients {
+        h2 {
+            &::after {
+                content: '\f564';
+                font-family: Font;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: hsl(0, 0%, 100%);
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__subtitle {
+        margin: 35px auto;
+        padding: 5px;
+        border-radius: 30px;
+    }
+
+    &__image img {
+        margin-top: 70px;
+        border-radius: 30px;
+        box-shadow: 0px 2px 0.2rem hsl(0, 0%, 62%);
+        width: 710px;
+        height: 400px;
+    }
+
+    &__body {
+        @include d-flex(column, center);
+        width: 710px;
+    }
+
+    &__instructions {
+        #{ $recipe }__subtitle {
+            background-color: hsl(41, 100%, 50%);
+        }
+
+        h2 {
+            &::after {
+                content: '\f560';
+                font-family: Font;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: hsl(0, 0%, 100%);
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__ingredients {
+        #{ $recipe }__subtitle {
+            background-color: hsl(81, 45%, 60%);
+        }
+    }
+
+    ul,
+    ol {
+        background-color: hsl(0, 0%, 99%);
+        border-radius: 30px;
+        padding: 30px;
+        padding-left: 50px;
+
+        li {
+            &:not(:nth-last-child(1)) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__icon {
+        margin: 70px 0;
+
+        i {
+            padding: 35px;
+            border-radius: 30px;
+            background-color: #FCFCFC;
+            font-size: 50px;
+            color: hsl(0, 0%, 37%);
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 @import
   'abstracts/variables',
   'abstracts/functions',
@@ -11,6 +13,7 @@
 @import
   'base/reset',
   'base/base',
+  'base/animations',
   'base/typography';
 
 @import
@@ -30,9 +33,11 @@
 
 @import
   'pages/home',
-  'pages/profile',
-  'pages/recipes',
-  'pages/register';
+  'pages/auth/profile',
+  'pages/auth/login',
+  'pages/auth/register',
+  'pages/recipe',
+  'pages/recipes';
 
 @import
   'themes/theme';
