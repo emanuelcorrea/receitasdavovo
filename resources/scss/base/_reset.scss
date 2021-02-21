@@ -39,6 +39,10 @@ nav ul {
     justify-content: center;
 }
 
+input {
+    outline: none;
+}
+
 input[type='file'] {
     display: none;
 }

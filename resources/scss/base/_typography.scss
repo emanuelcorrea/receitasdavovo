@@ -34,10 +34,70 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Harman Sans';
+    src: url('/fonts/Harman-Sans-webfont.eot');
+    src: url('/fonts/Harman-Sans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Harman-Sans-webfont.woff2') format('woff2'),
+         url('/fonts/Harman-Sans-webfont.woff') format('woff'),
+         url('/fonts/Harman-Sans-webfont.ttf') format('truetype'),
+         url('/fonts/Harman-Sans-webfont.svg#harmansans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     font-family: 'Lora', serif;
     font-size: 13px;
     color: $primary-font__color;
+}
+
+/**
+ * Any element that contains __title in the class name
+ * --------------------------------
+ */
+
+div[class*="__title"] {
+    * {
+        font-family: 'Harman Retro';
+        font-weight: normal;
+        text-transform: lowercase;
+        color: $primary-font__color;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+/**
+ * Any element that contains __subtitle in the class name
+ * --------------------------------
+ */
+
+div[class*="__subtitle"] {
+    * {
+        font-family: 'Harman Simple';
+        text-align: center;
+        color: $primary-font__color
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+
+    }
 }
 
 /**
@@ -49,12 +109,7 @@ body {
     &__title {
         text-align: center;
 
-        h1,
         h2 {
-            font-family: 'Harman Retro';
-            font-size: 32px;
-            font-weight: normal;
-            text-transform: lowercase;
             color: hsl(0, 0%, 100%);
         }
     }
@@ -65,17 +120,6 @@ body {
                 color: $primary-font__color
             }
         }
-
-        &__title {
-            h2 {
-                font-family: 'Harman Retro';
-                font-size: 28px;
-                font-weight: normal;
-                text-transform: lowercase;
-                color: $primary-font__color;
-            }
-        }
-
 
         &__description {
             p {
@@ -122,21 +166,6 @@ body {
 
         h1,
         h2 {
-            font-family: 'Harman Retro';
-            font-size: 32px;
-            font-weight: normal;
-            text-transform: lowercase;
-            color: hsl(0, 0%, 100%);
-        }
-    }
-
-    &__subtitle {
-        h2 {
-            font-family: 'Harman Simple';
-            font-size: 22px;
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 1px 1px 1px hsla(0, 0%, 20%, 0.459);
             color: hsl(0, 0%, 100%);
         }
     }
@@ -152,3 +181,41 @@ body {
     }
 }
 
+/**
+ * Login
+ * --------------------------------------
+ */
+
+.login,
+.register {
+    &__title {
+        text-align: center;
+    }
+}
+
+.login-content {
+    &__or {
+        color: hsl(15, 9%, 83%);
+    }
+
+    .login {
+        &__form {
+            input:not([type="submit"]) {
+                font-family: 'Roboto';
+                font-weight: normal;
+                font-size: 16px;
+                color: $primary-font__color;
+            }
+        }
+    }
+
+    .register {
+        &__subtitle {
+            p {
+                font-weight: normal;
+                font-family: 'Roboto';
+                font-size: 16px;
+            }
+        }
+    }
+}
