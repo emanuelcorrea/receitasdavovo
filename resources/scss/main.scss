@@ -33,10 +33,11 @@
 
 @import
   'pages/home',
-  'pages/profile',
+  'pages/auth/profile',
+  'pages/auth/login',
+  'pages/auth/register',
   'pages/recipe',
-  'pages/recipes',
-  'pages/register';
+  'pages/recipes';
 
 @import
   'themes/theme';

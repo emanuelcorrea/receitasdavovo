@@ -1,66 +1,65 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="account form login">
-    <div class="container">
-        <div class="center">
-            <div class="login">
-                <div class="form-content">
-                    <div class="titulo">
-                        <h2 class="title">Entrar</h2>
-                    </div>
-                    <p>Se você já for cadastrado, faça o login abaixo: </p>
-                    <div class="center">
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <div class="row">
-                                <div class="col">
-                                    <label for="email">Email</label>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Digite o seu email">
+<main class="login-content">
+    <div class="container center">
+        <div class="login">
+            <div class="login__content">
+                <div class="login__title">
+                    <h2>Entrar</h2>
+                </div>
+                <div class="login__form center">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <div class="row">
+                            <div class="col">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Digite o seu email">
 
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label for="senha">Senha</label>
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Digite a sua senha">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Digite a sua senha">
 
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
-                            <button type="submit" class="btn">
-                                {{ __('Entrar') }}
-                            </button>
+                        </div>
+                        <button type="submit" class="btn">
+                            {{ __('Entrar') }}
+                        </button>
 
-                            @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                        @if (Route::has('password.request'))
+                            <div class="login__request">
+                                <a href="{{ route('password.request') }}">
                                     {{ __('Esqueceu sua senha?') }}
                                 </a>
-                            @endif
-                        </form>
-                    </div>
+                            </div>
+                        @endif
+                    </form>
                 </div>
             </div>
-            <div class="or">
-                <h2 class="title">Ou</h2>
-            </div>
-            <div class="register">
-                <div class="form-content">
-                    <div class="titulo">
-                        <h2 class="title">Cadastrar-se</h2>
-                    </div>
+        </div>
+        <div class="login-content__or">
+            <h2 class="title">Ou</h2>
+        </div>
+        <div class="register">
+            <div class="register__content">
+                <div class="register__title">
+                    <h2>Cadastrar-se</h2>
+                </div>
+                <div class="register__subtitle">
                     <p>Crie uma conta para benefícios adicionais de usuários e direitos de postagem de receitas!</p>
-                    <a href="{{ route('register') }}" class="btn">Criar conta</a>
                 </div>
+                <a href="{{ route('register') }}" class="btn">Criar conta</a>
             </div>
         </div>
     </div>

@@ -1,0 +1,80 @@
+.login-content {
+    .container {
+        margin-top: 70px;
+        align-items: center
+    }
+
+    .login,
+    .register {
+        @include d-flex;
+        align-items: center;
+        border-radius: 30px;
+        background: #fff;
+        height: 515px;
+        padding: 0 100px;
+
+
+        &__title {
+            margin-bottom: 60px;
+        }
+    }
+
+    .login {
+        &__form {
+            label {
+                margin-bottom: 5px;
+            }
+
+            form {
+                @include d-flex(column, center);
+                align-items: center;
+            }
+
+            input:not([type="submit"]) {
+                height: 45px;
+                width: 300px;
+                padding: 0 15px;
+                border: 1px solid $primary-bg__color;
+                border-radius: 10px;
+                background-color: $primary-body-bg__color;
+                transition: 0.3s box-shadow ease;
+
+                &:focus {
+                    box-shadow: 0px 0px .4rem $primary-bg__color;
+                }
+            }
+        }
+
+        button[type="submit"] {
+            margin-top: 20px;
+        }
+
+        &__request {
+            margin-top: 10px;
+        }
+    }
+
+    &__or {
+        margin: 0 50px;
+    }
+
+    .register {
+        &__content {
+            @include d-flex(column, initial);
+            align-items: center;
+            height: 314px;
+        }
+
+        a {
+            margin-top: 50px;
+        }
+
+        &__subtitle {
+            @include d-flex(row, center);
+            align-items: center;
+            padding: 30px;
+            border-radius: 30px;
+            background-color: $primary-body-bg__color;
+        }
+    }
+}

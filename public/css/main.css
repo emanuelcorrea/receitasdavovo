@@ -33,7 +33,7 @@ nav ul {
  * Buttons
  * -------------------------------
  */
-.btn {
+.btn, a.btn {
   outline: none;
 }
 
@@ -44,6 +44,10 @@ nav ul {
 .center {
   display: flex;
   justify-content: center;
+}
+
+input {
+  outline: none;
 }
 
 input[type=file] {
@@ -129,10 +133,50 @@ label.img {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Harman Sans";
+  src: url("/fonts/Harman-Sans-webfont.eot");
+  src: url("/fonts/Harman-Sans-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Harman-Sans-webfont.woff2") format("woff2"), url("/fonts/Harman-Sans-webfont.woff") format("woff"), url("/fonts/Harman-Sans-webfont.ttf") format("truetype"), url("/fonts/Harman-Sans-webfont.svg#harmansans") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Lora", serif;
   font-size: 13px;
   color: #5e6164;
+}
+
+/**
+ * Any element that contains __title in the class name
+ * --------------------------------
+ */
+div[class*=__title] * {
+  font-family: "Harman Retro";
+  font-weight: normal;
+  text-transform: lowercase;
+  color: #5e6164;
+}
+div[class*=__title] h1 {
+  font-size: 32px;
+}
+div[class*=__title] h2 {
+  font-size: 28px;
+}
+
+/**
+ * Any element that contains __subtitle in the class name
+ * --------------------------------
+ */
+div[class*=__subtitle] * {
+  font-family: "Harman Simple";
+  text-align: center;
+  color: #5e6164;
+}
+div[class*=__subtitle] h1 {
+  font-size: 28px;
+}
+div[class*=__subtitle] h2 {
+  font-size: 22px;
 }
 
 /**
@@ -142,22 +186,10 @@ body {
 .news__title {
   text-align: center;
 }
-.news__title h1,
 .news__title h2 {
-  font-family: "Harman Retro";
-  font-size: 32px;
-  font-weight: normal;
-  text-transform: lowercase;
   color: white;
 }
 .news .news-primary__item:visited {
-  color: #5e6164;
-}
-.news .news-primary__title h2 {
-  font-family: "Harman Retro";
-  font-size: 28px;
-  font-weight: normal;
-  text-transform: lowercase;
   color: #5e6164;
 }
 .news .news-primary__description p {
@@ -191,18 +223,6 @@ body {
 }
 .recipe__title h1,
 .recipe__title h2 {
-  font-family: "Harman Retro";
-  font-size: 32px;
-  font-weight: normal;
-  text-transform: lowercase;
-  color: white;
-}
-.recipe__subtitle h2 {
-  font-family: "Harman Simple";
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 1px 1px 1px rgba(51, 51, 51, 0.459);
   color: white;
 }
 .recipe ul li,
@@ -211,6 +231,30 @@ body {
   font-size: 18px;
   font-weight: normal;
   line-height: 28px;
+}
+
+/**
+ * Login
+ * --------------------------------------
+ */
+.login__title,
+.register__title {
+  text-align: center;
+}
+
+.login-content__or {
+  color: #d8d2d0;
+}
+.login-content .login__form input:not([type=submit]) {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 16px;
+  color: #5e6164;
+}
+.login-content .register__subtitle p {
+  font-weight: normal;
+  font-family: "Roboto";
+  font-size: 16px;
 }
 
 #header-menu ul,
@@ -595,20 +639,30 @@ main.form input[type=submit]:hover {
   background-color: #c94d72;
 }
 
-.btn {
+.btn, a.btn {
+  display: block;
+  text-align: center;
   width: 150px;
   height: 45px;
-  background-color: #c9315e;
-  border: 1px solid #e9e9e9;
+  background-color: #e45853;
+  border-radius: 30px;
+  border: none;
   color: #FFF;
   cursor: pointer;
-  margin: 0 auto;
-  margin-top: 20px;
-  box-shadow: 0px 0px 3px #8d8d8d;
-  transition: 0.3s background-color;
+  box-shadow: 0px 0px 0.3rem #8c8c8c;
+  transition: 0.3s filter ease, 0.3s box-shadow ease;
+  font-size: 15px;
 }
 .btn:hover {
-  background-color: #c94f74;
+  filter: saturate(1.2);
+  box-shadow: 0px 0px 0.7rem #bfbfbf;
+}
+
+a.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /*! Banner  */
@@ -1072,6 +1126,173 @@ main.profile .row .profile-content {
   margin-left: 20px;
 }
 
+.login-content .container {
+  margin-top: 70px;
+  align-items: center;
+}
+.login-content .login,
+.login-content .register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: #fff;
+  height: 515px;
+  padding: 0 100px;
+}
+.login-content .login__title,
+.login-content .register__title {
+  margin-bottom: 60px;
+}
+.login-content .login__form label {
+  margin-bottom: 5px;
+}
+.login-content .login__form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-content .login__form input:not([type=submit]) {
+  height: 45px;
+  width: 300px;
+  padding: 0 15px;
+  border: 1px solid #e45853;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+  transition: 0.3s box-shadow ease;
+}
+.login-content .login__form input:not([type=submit]):focus {
+  box-shadow: 0px 0px 0.4rem #e45853;
+}
+.login-content .login button[type=submit] {
+  margin-top: 20px;
+}
+.login-content .login__request {
+  margin-top: 10px;
+}
+.login-content__or {
+  margin: 0 50px;
+}
+.login-content .register__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  height: 314px;
+}
+.login-content .register a {
+  margin-top: 50px;
+}
+.login-content .register__subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #fcfcfc;
+}
+
+/*! Register  */
+.account .container > .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account div.login,
+.account div.register {
+  margin: 40px 0;
+  padding-bottom: 40px;
+  width: 800px;
+}
+
+.form-content h2 {
+  text-transform: uppercase;
+  font-family: "Roboto Mono";
+  letter-spacing: 1px;
+}
+
+.form-content p {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.form-content input[type=text],
+.form-content input[type=password],
+.form-content input[type=email] {
+  width: 350px !important;
+  outline-color: #e45853;
+}
+
+.or {
+  margin-left: 90px;
+}
+
+.or h2 {
+  color: #99999978;
+  background: none;
+  text-transform: uppercase;
+}
+
+.or::before {
+  margin-left: -100%;
+  margin-right: 10px;
+}
+
+.or::after {
+  margin-right: -100%;
+  margin-left: 10px;
+}
+
+.or::before,
+.or::after {
+  content: "";
+  width: 30%;
+  border-bottom: 1px solid #99999978;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main.login .titulo {
+  padding-bottom: 0;
+}
+
+main.register .titulo {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+main.register input[type=submit] {
+  margin-bottom: 150px;
+}
+
+main.register .sexo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 30px auto;
+}
+
+main.register .sexo label {
+  margin: 15px 0;
+}
+
+main.register .sexo .row .col {
+  margin-right: 15px;
+}
+
+input[type=radio] {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
 .recipe {
   display: flex;
   flex-direction: column;
@@ -1242,109 +1463,6 @@ main.receitas article header span {
 
 main.receitas article:hover .receitas-img {
   transform: scale(1.0111) rotate(0.2deg);
-}
-
-/*! Register  */
-.account .container > .center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.account div.login,
-.account div.register {
-  margin: 40px 0;
-  padding-bottom: 40px;
-  width: 800px;
-  border: 1px solid #00000025;
-}
-
-div.register {
-  border: 1px solid #00000025;
-}
-
-.form-content h2 {
-  text-transform: uppercase;
-  font-family: "Roboto Mono";
-  letter-spacing: 1px;
-}
-
-.form-content p {
-  text-align: center;
-  margin: 50px 0;
-}
-
-.form-content input[type=text],
-.form-content input[type=password],
-.form-content input[type=email] {
-  width: 350px !important;
-  outline-color: #e45853;
-}
-
-.or {
-  margin-left: 90px;
-}
-
-.or h2 {
-  color: #99999978;
-  background: none;
-  text-transform: uppercase;
-}
-
-.or::before {
-  margin-left: -100%;
-  margin-right: 10px;
-}
-
-.or::after {
-  margin-right: -100%;
-  margin-left: 10px;
-}
-
-.or::before,
-.or::after {
-  content: "";
-  width: 30%;
-  border-bottom: 1px solid #99999978;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-main.login .titulo {
-  padding-bottom: 0;
-}
-
-main.register .titulo {
-  padding-top: 50px;
-  padding-bottom: 150px;
-}
-
-main.register input[type=submit] {
-  margin-bottom: 150px;
-}
-
-main.register .sexo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  margin: 30px auto;
-}
-
-main.register .sexo label {
-  margin: 15px 0;
-}
-
-main.register .sexo .row .col {
-  margin-right: 15px;
-}
-
-input[type=radio] {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
 }
 
 ::-moz-selection {
