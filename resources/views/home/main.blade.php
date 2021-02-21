@@ -75,11 +75,6 @@
                 </div>
             </div>
         </section>
-        <section class="categories">
-            <div class="categories__title">
-                <h2>Destaques</h2>
-            </div>
-        </section>
         @foreach ($recipes as $recipe)
             <article class="recipe">
                 <header class="header__header">
