@@ -6,7 +6,7 @@
         <div class="row">
             <div class="profile-user">
                 <div class="profile-description">
-                    <img class="profile-image" src="http://receitas.emanuelcorrea.com.br/public/assets/img/vovo-feliz.png" alt="Profile user image">
+                    <img class="profile-image" src="{{ asset('/img/vovo-feliz.webp') }}" alt="Profile user image" width="90" height="93">
 
                     <p class="profile-username">{{ Auth::user()->name }}</p>
                 </div>

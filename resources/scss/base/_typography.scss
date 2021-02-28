@@ -1,50 +1,89 @@
 @font-face {
     font-family: 'Harman Retro';
-    src: url('/fonts/Harman-Retro-webfont.eot');
-    src: url('/fonts/Harman-Retro-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Harman-Retro-webfont.woff2') format('woff2'),
-         url('/fonts/Harman-Retro-webfont.woff') format('woff'),
-         url('/fonts/Harman-Retro-webfont.ttf') format('truetype'),
-         url('/fonts/Harman-Retro-webfont.svg#harmanretro') format('svg');
+    src: url('/fonts/Harman-Retro-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Harman Simple';
-    src: url('/fonts/Harman-Simple-webfont.eot');
-    src: url('/fonts/Harman-Simple-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Harman-Simple-webfont.woff2') format('woff2'),
-         url('/fonts/Harman-Simple-webfont.woff') format('woff'),
-         url('/fonts/Harman-Simple-webfont.ttf') format('truetype'),
-         url('/fonts/Harman-Simple-webfont.svg#harmansimple') format('svg');
+    src: url('/fonts/Harman-Simple-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Century';
-    src: url('/fonts/CenturySchoolbook-Regular-webfont.eot');
-    src: url('/fonts/CenturySchoolbook-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/CenturySchoolbook-Regular-webfont.woff2') format('woff2'),
-         url('/fonts/CenturySchoolbook-Regular-webfont.woff') format('woff'),
-         url('/fonts/CenturySchoolbook-Regular-webfont.ttf') format('truetype'),
-         url('/fonts/CenturySchoolbook-Regular-webfont.svg#century_schoolbook_fsregular') format('svg');
+    src: url('/fonts/CenturySchoolbook-Regular-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Harman Sans';
-    src: url('/fonts/Harman-Sans-webfont.eot');
-    src: url('/fonts/Harman-Sans-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Harman-Sans-webfont.woff2') format('woff2'),
-         url('/fonts/Harman-Sans-webfont.woff') format('woff'),
-         url('/fonts/Harman-Sans-webfont.ttf') format('truetype'),
-         url('/fonts/Harman-Sans-webfont.svg#harmansans') format('svg');
+    src: url('/fonts/Harman-Sans-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/RobotoMono/RobotoMono-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 body {

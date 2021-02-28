@@ -75,7 +75,8 @@
             &__link {
                 margin-right: 45px;
                 position: relative;
-                font-family: 'Roboto Mono';
+                font-family: "Harman Retro";
+                letter-spacing: .1rem;
                 font-weight: bold;
                 font-size: 1.1rem;
                 text-transform: uppercase;
@@ -238,7 +239,8 @@
     padding: 10px 0;
 }
 
-#check-menu:checked ~ #menu-hidden {
+#check-menu:checked ~ #menu-hidden,
+#check-menu-fixed:checked ~ #menu-hidden {
     display: block;
     right: 0;
     opacity: 1;
