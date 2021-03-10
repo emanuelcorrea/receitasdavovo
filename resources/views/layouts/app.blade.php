@@ -2,16 +2,6 @@
 
 <html lang="pt-br">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140915737-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-140915737-1');
-        </script>
-
         <!-- Title -->
         <title>Receitas da Vovó</title>
 
@@ -19,20 +9,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="Cache-control" content="max-age=604800">
+        <meta name="title" content="Receitas da Vóvó">
+        <meta name="description" content="Receitas da Vovó - As melhores receitas você só encontra aqui.">
+        <meta name="theme-color" content="Pink">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://metatags.io/">
+        <meta property="og:title" content="Receitas da Vóvó">
+        <meta property="og:description" content="Receitas da Vovó - As melhores receitas você só encontra aqui.">
+        {{-- <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"> --}}
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://metatags.io/">
+        <meta property="twitter:title" content="Receitas da Vóvó">
+        <meta property="twitter:description" content="Receitas da Vovó - As melhores receitas você só encontra aqui.">
+        {{-- <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"> --}}
 
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-        {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css?family=Karla|Lora|Pacifico|Roboto+Mono&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+        <link rel="preload" as="font" href="{{ asset('fonts/Harman-Retro-webfont.woff2') }}" crossOrigin="anonymous">
+        <link rel="preload" as="font" href="{{ asset('fonts/Harman-Simple-webfont.woff2') }}" crossOrigin="anonymous">
+        <link rel="preload" as="font" href="{{ asset('fonts/Harman-Sans-webfont.woff2') }}" crossOrigin="anonymous">
+        <link rel="preload" as="font" href="{{ asset('fonts/CenturySchoolbook-Regular-webfont.woff2') }}" crossOrigin="anonymous">
+        <link rel="preload" as="font" href="{{ asset('webfonts/fa-regular-400.woff2') }}" crossOrigin="anonymous">
+        <link rel="preload" as="font" href="{{ asset('webfonts/fa-solid-900.woff2') }}" crossOrigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}" crossorigin="anonymous">
+
+        <!-- Javascript -->
+        <script src="{{ asset('/js/jssor.js') }}">console.log('ok')</script>
+        <script src="{{ asset('/js/jquery.js') }}">console.log('ok')</script>
 
         <!-- Favicon -->
-        {{-- <link rel="icon" type="imagem/png" href="<?php echo DIRIMG;?>favicon.png"> --}}
     </head>
     <body>
         @include('layouts.header')
@@ -55,6 +67,5 @@
                 }
             }
         </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </body>
 </html>

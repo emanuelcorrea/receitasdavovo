@@ -3,14 +3,14 @@
         <div class="header">
             <div class="header__logo">
                 <a href="{{ url('/') }}" alt="Logo Receitas da Vovó">
-                    <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/logo2.png">
+                    <img src="{{ asset('/img/logo2.webp') }}" width="140" height="85" alt="Logo">
                 </a>
             </div>
             <div class="header__search">
                 <form action="{{ url('/') }}" method="GET">
                     @csrf
-                    <input type="search" name="search" placeholder="Procure por uma receita">
-                    <button type="submit" name="submit">
+                    <input aria-label="Campo de pesquisa de receita" type="search" name="search" placeholder="Procure por uma receita">
+                    <button type="submit" name="submit" aria-label="Botão de pesquisa">
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
@@ -32,7 +32,7 @@
                 <div class="header-menu" id="menu-hidden">
                     <div class="header-menu__user">
                         <div class="header-menu__logo">
-                            <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/vovo-feliz.png">
+                            <img src="{{ asset('/img/vovo-feliz.webp') }}" width="200" height="207" alt="Logo user">
                         </div>
                     </div>
                     <div class="header-menu__nav">
@@ -97,14 +97,14 @@
             <div class="header menu-fixed">
                 <div class="header__logo">
                     <a href="{{ url('/') }}" alt="Logo Receitas da Vovó">
-                        <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/logo2.png" width="100">
+                        <img src="{{ asset('/img/logo2.webp') }}" width="100" height="61" alt="Logo">
                     </a>
                 </div>
                 <div class="header__search">
                     <form action="{{ url('/') }}" method="GET">
                         @csrf
-                        <input type="search" name="search" placeholder="Procure por uma receita">
-                        <button type="submit" name="submit">
+                        <input aria-label="Campo de pesquisa de receita" type="search" name="search" placeholder="Procure por uma receita">
+                        <button type="submit" name="submit" value="Submit" aria-label="Botão de pesquisa">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -118,15 +118,15 @@
                         </ul>
                     </nav>
                     <div class="header-menu__icon">
-                        <label for="check-menu">
+                        <label for="check-menu-fixed">
                             <i class="fas fa-bars"></i>
                         </label>
                     </div>
-                    <input type="checkbox" name="check-menu" id="check-menu">
+                    <input type="checkbox" name="check-menu" id="check-menu-fixed">
                     <div class="header-menu" id="menu-hidden">
                         <div class="header-menu__user">
                             <div class="header-menu__logo">
-                                <img src="http://receitas.emanuelcorrea.com.br/public/assets/img/vovo-feliz.png">
+                                <img src="{{ asset('/img/vovo-feliz.webp') }}" width="200" height="207" alt="Logo User">
                             </div>
                         </div>
                         <div class="header-menu__nav">
