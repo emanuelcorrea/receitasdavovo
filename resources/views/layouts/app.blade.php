@@ -36,6 +36,7 @@
         <link rel="preload" as="font" href="{{ asset('fonts/Harman-Simple-webfont.woff2') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('fonts/Harman-Sans-webfont.woff2') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('fonts/CenturySchoolbook-Regular-webfont.woff2') }}" crossOrigin="anonymous">
+        <link rel="preload" as="font" href="{{ asset('fonts/RobotoMono/RobotoMono-Regular.ttf') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('webfonts/fa-regular-400.woff2') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('webfonts/fa-solid-900.woff2') }}" crossOrigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}" crossorigin="anonymous">
