@@ -45,20 +45,13 @@
         input[type="search"] {
             width: 400px;
             padding-left: 15px;
-            font-size: 16px;
-            color: $primary-font__color;
         }
 
         button[type="submit"] {
             width: 60px;
             cursor: pointer;
             background-color: $primary-bg__color;
-            color: #FFF;
             border-radius: 0 3px 3px 0;
-
-            i {
-                font-size: 18px;
-            }
         }
     }
 
@@ -75,12 +68,6 @@
             &__link {
                 margin-right: 45px;
                 position: relative;
-                font-family: "Harman Retro";
-                letter-spacing: .1rem;
-                font-weight: bold;
-                font-size: 1.1rem;
-                text-transform: uppercase;
-                color: #FFF;
 
                 &--active::before {
                     content: '';
@@ -112,15 +99,13 @@
 
             &__icon label {
                 padding: 12px 20px;
-                color: $primary-bg__color;
-                font-size: 20px;
                 cursor: pointer;
                 background-color: #FFF;
                 box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.151);
             }
 
             &__user {
-                @include d-flex(row, center);
+                @include d-flex($direction: row);
                 padding: 40px 0 10px;
                 background-color: rgba(228, 89, 84, 0.39);
             }
@@ -145,16 +130,14 @@
                 width: 100%;
 
                 p {
-                    text-align: center;
+                    @include d-flex($direction: row);
+                    width: 100%;
+                    height: 50px;
+                    align-items: center;
                     cursor: default;
-                    color: #FFF;
                     background-color: #e4595463;
                     position: relative;
                     border-top: 1px solid rgba(255, 255, 255, 0.199);
-
-                    span {
-                        color: #a03430;
-                    }
 
                     &::after {
                         background-image: url("/img/shape2.png");
@@ -171,7 +154,6 @@
                 }
 
                 i {
-                    font-size: 22px;
                     margin-left: 5px;
                 }
 
@@ -184,17 +166,7 @@
                 display: block;
                 position: relative;
                 width: 100%;
-                text-align: right;
                 padding: 25px;
-
-                & {
-                    color: #FFF;
-                    text-decoration: none;
-                    font-family: 'Roboto Mono';
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 1rem;
-                }
 
                 &:not(p):hover {
                     background-color: #ffffff5e;

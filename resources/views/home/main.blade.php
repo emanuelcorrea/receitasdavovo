@@ -11,7 +11,7 @@
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:580px;overflow:hidden;">
                     <div style="background-color:#000000;">
-                        <img data-u="image" style="opacity:1;" src="{{ asset('/img/banner.jpg') }}" alt="Banner" width="980" height="580"/>
+                        <img data-u="image" style="opacity:1;" src="{{ asset('/img/banner.webp') }}" alt="Banner" width="980" height="580"/>
                     </div>
                     <div>
                         <img data-u="image" style="opacity:1;" src="{{ asset('/img/banner2.webp') }}" alt="Banner" width="980" height="580"/>

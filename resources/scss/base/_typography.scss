@@ -87,9 +87,8 @@
 }
 
 body {
-    font-family: 'Lora', serif;
-    font-size: 13px;
     color: $primary-font__color;
+    font-size: 13px;
 }
 
 /**
@@ -115,6 +114,110 @@ div[class*="__title"] {
 }
 
 /**
+ * Header
+ *---------------------------------
+ */
+
+.header {
+
+    /**
+    * Input search
+    * -----------------------------------------
+    */
+    &__search form {
+        input[type="search"] {
+            font-size: 16px;
+            color: $primary-font__color;
+        }
+
+
+        button[type="submit"] {
+            color: #FFF;
+
+            i {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /**
+    * Options (Nav & Menu hidden)
+    * -----------------------------------------
+    */
+
+    &__options {
+        .header-nav {
+            &__link {
+                font-family: "Harman Retro";
+                letter-spacing: .1rem;
+                font-weight: bold;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                color: #FFF;
+            }
+        }
+
+        &__item {
+            .header-menu {
+                &__icon label {
+                    color: $primary-bg__color;
+                    font-size: 20px;
+                }
+
+                &__item {
+                    p {
+                        color: #FFF;
+                        font-family: 'Roboto';
+                        text-align: center;
+
+                        span {
+                            color: #a03430;
+                        }
+                    }
+
+                    i {
+                        font-size: 22px;
+                    }
+                }
+
+                &__link {
+                    text-align: right;
+
+                    & {
+                        color: #FFF;
+                        font-family: 'Roboto Mono';
+                        font-size: 1rem;
+                        font-weight: bold;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+
+                    &:not(p):hover {
+                        background-color: #ffffff5e;
+                    }
+                }
+            }
+        }
+    }
+
+    &.menu-fixed {
+        .header-nav__link {
+            color: #E45954;
+        }
+    }
+}
+
+
+/**
+ * Button
+ *---------------------------------
+ */
+
+.btn {
+    font-family: 'Roboto';
+}
+
+/**
  * Any element that contains __subtitle in the class name
  * --------------------------------
  */
@@ -123,7 +226,7 @@ div[class*="__subtitle"] {
     * {
         font-family: 'Harman Simple';
         text-align: center;
-        color: $primary-font__color
+        color: hsl(0, 0%, 100%);
     }
 
     h1 {
@@ -229,8 +332,8 @@ div[class*="__subtitle"] {
 }
 
 .login-content {
-    &__or {
-        color: hsl(15, 9%, 83%);
+    &__or h2 {
+        color: hsl(0, 0%, 53%);
     }
 
     .login {
@@ -241,6 +344,10 @@ div[class*="__subtitle"] {
                 font-size: 16px;
                 color: $primary-font__color;
             }
+        }
+
+        &__request a {
+            font-family: 'Roboto';
         }
     }
 

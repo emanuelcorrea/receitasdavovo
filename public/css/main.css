@@ -190,9 +190,8 @@ label.img {
   font-display: swap;
 }
 body {
-  font-family: "Lora", serif;
-  font-size: 13px;
   color: #5e6164;
+  font-size: 13px;
 }
 
 /**
@@ -213,13 +212,86 @@ div[class*=__title] h2 {
 }
 
 /**
+ * Header
+ *---------------------------------
+ */
+.header {
+  /**
+  * Input search
+  * -----------------------------------------
+  */
+  /**
+  * Options (Nav & Menu hidden)
+  * -----------------------------------------
+  */
+}
+.header__search form input[type=search] {
+  font-size: 16px;
+  color: #5e6164;
+}
+.header__search form button[type=submit] {
+  color: #FFF;
+}
+.header__search form button[type=submit] i {
+  font-size: 18px;
+}
+.header__options .header-nav__link {
+  font-family: "Harman Retro";
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #FFF;
+}
+.header__options__item .header-menu__icon label {
+  color: #e45853;
+  font-size: 20px;
+}
+.header__options__item .header-menu__item p {
+  color: #FFF;
+  font-family: "Roboto";
+  text-align: center;
+}
+.header__options__item .header-menu__item p span {
+  color: #a03430;
+}
+.header__options__item .header-menu__item i {
+  font-size: 22px;
+}
+.header__options__item .header-menu__link {
+  text-align: right;
+}
+.header__options__item .header-menu__link {
+  color: #FFF;
+  font-family: "Roboto Mono";
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header__options__item .header-menu__link:not(p):hover {
+  background-color: #ffffff5e;
+}
+.header.menu-fixed .header-nav__link {
+  color: #E45954;
+}
+
+/**
+ * Button
+ *---------------------------------
+ */
+.btn, a.btn {
+  font-family: "Roboto";
+}
+
+/**
  * Any element that contains __subtitle in the class name
  * --------------------------------
  */
 div[class*=__subtitle] * {
   font-family: "Harman Simple";
   text-align: center;
-  color: #5e6164;
+  color: white;
 }
 div[class*=__subtitle] h1 {
   font-size: 28px;
@@ -291,14 +363,17 @@ div[class*=__subtitle] h2 {
   text-align: center;
 }
 
-.login-content__or {
-  color: #d8d2d0;
+.login-content__or h2 {
+  color: #878787;
 }
 .login-content .login__form input:not([type=submit]) {
   font-family: "Roboto";
   font-weight: normal;
   font-size: 16px;
   color: #5e6164;
+}
+.login-content .login__request a {
+  font-family: "Roboto";
 }
 .login-content .register__subtitle p {
   font-weight: normal;
@@ -351,18 +426,12 @@ div[class*=__subtitle] h2 {
 .header__search form input[type=search] {
   width: 400px;
   padding-left: 15px;
-  font-size: 16px;
-  color: #5e6164;
 }
 .header__search form button[type=submit] {
   width: 60px;
   cursor: pointer;
   background-color: #e45853;
-  color: #FFF;
   border-radius: 0 3px 3px 0;
-}
-.header__search form button[type=submit] i {
-  font-size: 18px;
 }
 .header__options {
   display: flex;
@@ -373,12 +442,6 @@ div[class*=__subtitle] h2 {
 .header__options .header-nav__link {
   margin-right: 45px;
   position: relative;
-  font-family: "Harman Retro";
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  color: #FFF;
 }
 .header__options .header-nav__link--active::before {
   content: "";
@@ -408,8 +471,6 @@ div[class*=__subtitle] h2 {
 }
 .header__options .header-menu__icon label {
   padding: 12px 20px;
-  color: #e45853;
-  font-size: 20px;
   cursor: pointer;
   background-color: #FFF;
   box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.151);
@@ -441,15 +502,16 @@ div[class*=__subtitle] h2 {
   width: 100%;
 }
 .header__options .header-menu__item p {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  align-items: center;
   cursor: default;
-  color: #FFF;
   background-color: #e4595463;
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.199);
-}
-.header__options .header-menu__item p span {
-  color: #a03430;
 }
 .header__options .header-menu__item p::after {
   background-image: url("/img/shape2.png");
@@ -464,7 +526,6 @@ div[class*=__subtitle] h2 {
   z-index: 1000;
 }
 .header__options .header-menu__item i {
-  font-size: 22px;
   margin-left: 5px;
 }
 .header__options .header-menu__item:nth-child(2) {
@@ -474,16 +535,7 @@ div[class*=__subtitle] h2 {
   display: block;
   position: relative;
   width: 100%;
-  text-align: right;
   padding: 25px;
-}
-.header__options .header-menu__link {
-  color: #FFF;
-  text-decoration: none;
-  font-family: "Roboto Mono";
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
 }
 .header__options .header-menu__link:not(p):hover {
   background-color: #ffffff5e;
@@ -696,7 +748,7 @@ main.form input[type=submit]:hover {
   text-align: center;
   width: 150px;
   height: 45px;
-  background-color: #e45853;
+  background-color: #b9413d;
   border-radius: 30px;
   border: none;
   color: #FFF;
@@ -1106,7 +1158,6 @@ main.profile .row .profile-content {
   padding: 0 15px;
   border: 1px solid #e45853;
   border-radius: 10px;
-  background-color: #fcfcfc;
   transition: 0.3s box-shadow ease;
 }
 .login-content .login__form input:not([type=submit]):focus {
@@ -1141,102 +1192,45 @@ main.profile .row .profile-content {
   background-color: #fcfcfc;
 }
 
-/*! Register  */
-.account .container > .center {
+.register-content .container {
+  margin-top: 70px;
+  align-items: center;
+}
+.register-content .register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: #fff;
+  padding: 70px 100px;
+}
+.register-content .register__title {
+  margin-bottom: 60px;
+}
+.register-content .register button[type=submit] {
+  margin-top: 20px;
+}
+.register-content .register__request {
+  margin-top: 10px;
+}
+.register-content .register__form form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.account div.login,
-.account div.register {
-  margin: 40px 0;
-  padding-bottom: 40px;
-  width: 800px;
+.register-content .register__form input:not([type=submit]) {
+  height: 45px;
+  width: 300px;
+  padding: 0 15px;
+  border: 1px solid #e45853;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+  transition: 0.3s box-shadow ease;
 }
-
-.form-content h2 {
-  text-transform: uppercase;
-  font-family: "Roboto Mono";
-  letter-spacing: 1px;
-}
-
-.form-content p {
-  text-align: center;
-  margin: 50px 0;
-}
-
-.form-content input[type=text],
-.form-content input[type=password],
-.form-content input[type=email] {
-  width: 350px !important;
-  outline-color: #e45853;
-}
-
-.or {
-  margin-left: 90px;
-}
-
-.or h2 {
-  color: #99999978;
-  background: none;
-  text-transform: uppercase;
-}
-
-.or::before {
-  margin-left: -100%;
-  margin-right: 10px;
-}
-
-.or::after {
-  margin-right: -100%;
-  margin-left: 10px;
-}
-
-.or::before,
-.or::after {
-  content: "";
-  width: 30%;
-  border-bottom: 1px solid #99999978;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-main.login .titulo {
-  padding-bottom: 0;
-}
-
-main.register .titulo {
-  padding-top: 50px;
-  padding-bottom: 150px;
-}
-
-main.register input[type=submit] {
-  margin-bottom: 150px;
-}
-
-main.register .sexo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  margin: 30px auto;
-}
-
-main.register .sexo label {
-  margin: 15px 0;
-}
-
-main.register .sexo .row .col {
-  margin-right: 15px;
-}
-
-input[type=radio] {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
+.register-content .register__form input:not([type=submit]):focus {
+  box-shadow: 0px 0px 0.4rem #e45853;
 }
 
 .recipe {
