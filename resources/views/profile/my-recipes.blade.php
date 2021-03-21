@@ -19,16 +19,16 @@
                     <div class="my-recipes-item__image">
                         <img src="http://127.0.0.1:8000/img/receitas/quentao-vinho.jpg" alt="Recipe Image">
                     </div>
-                    <div class="my-recipes-item__options">
+                    <div class="my-recipes-item__overlay">
                         <div class="my-recipes-item__name">
                             <a href="#">Quentão de vinho</a>
                         </div>
-                        <div>
+                        <div class="my-recipes-item__options">
                             <div class="my-recipes-item__edit">
-                                <i></i>
+                                <i class="far fa-edit"></i>
                             </div>
                             <div class="my-recipes-item__remove">
-                                <i></i>
+                                <i class="fas fa-trash"></i>
                             </div>
                         </div>
                     </div>
