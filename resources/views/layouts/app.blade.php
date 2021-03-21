@@ -42,10 +42,8 @@
         <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}" crossorigin="anonymous">
 
         <!-- Javascript -->
-        <script src="{{ asset('/js/jssor.js') }}">console.log('ok')</script>
         <script src="{{ asset('/js/jquery.js') }}">console.log('ok')</script>
-
-        <!-- Favicon -->
+        <script src="{{ asset('/js/jssor.js') }}">console.log('ok')</script>
     </head>
     <body>
         @include('layouts.header')
@@ -68,5 +66,6 @@
                 }
             }
         </script>
+        <script src="{{ asset('/js/app.js') }}"></script>
     </body>
 </html>

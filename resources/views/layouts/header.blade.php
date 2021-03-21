@@ -23,12 +23,11 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header-menu__icon">
-                    <label for="check-menu">
+                <div id="menu-button" class="header-menu__icon">
+                    <label>
                         <i class="fas fa-bars"></i>
                     </label>
                 </div>
-                <input type="checkbox" name="check-menu" id="check-menu">
                 <div class="header-menu" id="menu-hidden">
                     <div class="header-menu__user">
                         <div class="header-menu__logo">
@@ -117,71 +116,10 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="header-menu__icon">
-                        <label for="check-menu-fixed">
+                    <div id="menu-fixed-button" class="header-menu__icon">
+                        <label>
                             <i class="fas fa-bars"></i>
                         </label>
-                    </div>
-                    <input type="checkbox" name="check-menu" id="check-menu-fixed">
-                    <div class="header-menu" id="menu-hidden">
-                        <div class="header-menu__user">
-                            <div class="header-menu__logo">
-                                <img src="{{ asset('/img/vovo-feliz.webp') }}" width="200" height="207" alt="Logo User">
-                            </div>
-                        </div>
-                        <div class="header-menu__nav">
-                            @guest
-                                <ul>
-                                    <li class="header-menu__item">
-                                        <p class="header-menu__link">
-                                            Olá, <span>visitante</span>!
-                                        </p>
-                                    </li>
-                                    <li class="header-menu__item">
-                                        <a href="{{ url('login') }}" class="header-menu__link" style="text-align: center;">Entrar / Cadastrar</a>
-                                    </li>
-                                    <li class="header-menu__item">
-                                        <a href="#" class="header-menu__link">
-                                            Suporte
-                                            <i class="fas fa-envelope-open-text"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            @else
-                                <ul>
-                                    <li class="header-menu__item">
-                                        <p>Olá, <span>{{ Auth::user()->name }}</span>!</p>
-                                    </li>
-                                    <li class="header-menu__item">
-                                        <a href="{{ route('profile') }}" class="header-menu__link">
-                                            Minha conta
-                                            <i class="far fa-newspaper"></i>
-                                        </a>
-                                    </li>
-                                    <li class="header-menu__item">
-                                        <a href="#" class="header-menu__link">
-                                            Minhas receitas
-                                            <i class="fas fa-book"></i>
-                                        </a>
-                                    </li>
-                                    <li class="header-menu__item">
-                                        <a href="#" class="header-menu__link">
-                                            Suporte
-                                            <i class="fas fa-envelope-open-text"></i>
-                                        </a>
-                                    </li>
-                                    <li class="header-menu__item">
-                                        <a href="{{ url('logout') }}" class="header-menu__link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            Sair
-                                            <i class="fas fa-sign-out-alt"></i>
-                                        </a>
-                                        <form id="logout-form" action="{{ url('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </li>
-                                </ul>
-                            @endguest
-                        </div>
                     </div>
                 </div>
             </div>

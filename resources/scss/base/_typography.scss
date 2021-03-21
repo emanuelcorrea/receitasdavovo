@@ -364,3 +364,27 @@ div[class*="__subtitle"] {
         }
     }
 }
+
+/**
+ * My Recipes
+ * --------------------------------------
+ */
+
+.my-recipes {
+    &__search input {
+        font-size: 16px;
+    }
+
+    .my-recipes-item {
+        &__name a {
+            font-family: 'Harman Simple';
+            font-size: 25px;
+            color: #fff;
+        }
+
+        &__options i {
+            font-size: 22px;
+            color: $primary-bg__color;
+        }
+    }
+}
