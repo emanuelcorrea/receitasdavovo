@@ -912,6 +912,10 @@ a.btn {
  * News (destaques)
  * ------------------------------------
  */
+.banner {
+  position: relative;
+}
+
 .news {
   display: flex;
   flex-direction: column;
