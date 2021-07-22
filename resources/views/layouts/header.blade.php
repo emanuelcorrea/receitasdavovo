@@ -39,7 +39,7 @@
                             <ul>
                                 <li class="header-menu__item">
                                     <p class="header-menu__link">
-                                        Olá, <span>visitante</span>!
+                                        Olá, <span>visitante</span>
                                     </p>
                                 </li>
                                 <li class="header-menu__item">
@@ -55,7 +55,7 @@
                         @else
                             <ul>
                                 <li class="header-menu__item">
-                                    <p>Olá, <span>{{ Auth::user()->name }}</span>!</p>
+                                    <p>Olá, <span>{{ Auth::user()->name }}</span></p>
                                 </li>
                                 <li class="header-menu__item">
                                     <a href="{{ route('profile') }}" class="header-menu__link">
