@@ -157,44 +157,46 @@ div[class*="__title"] {
             }
         }
 
-        &__item {
-            .header-menu {
-                &__icon label {
-                    color: $primary-bg__color;
-                    font-size: 20px;
+        .header-menu {
+            font-family: 'Roboto Mono';
+
+            &__icon label {
+                color: $primary-bg__color;
+                font-size: 20px;
+            }
+
+            &__item {
+                p {
+                    color: #FFF;
+                    font-family: "Harman Retro";
+                    font-weight: bold;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    text-align: center;
+
+                    span {
+                        color: #a03430;
+                    }
                 }
 
-                &__item {
-                    p {
-                        color: #FFF;
-                        font-family: 'Roboto';
-                        text-align: center;
+                i {
+                    font-size: 22px;
+                }
+            }
 
-                        span {
-                            color: #a03430;
-                        }
-                    }
+            &__link {
+                text-align: right;
 
-                    i {
-                        font-size: 22px;
-                    }
+                & {
+                    color: #FFF;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    text-decoration: none;
+                    text-transform: uppercase;
                 }
 
-                &__link {
-                    text-align: right;
-
-                    & {
-                        color: #FFF;
-                        font-family: 'Roboto Mono';
-                        font-size: 1rem;
-                        font-weight: bold;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                    }
-
-                    &:not(p):hover {
-                        background-color: #ffffff5e;
-                    }
+                &:not(p):hover {
+                    background-color: #ffffff5e;
                 }
             }
         }
@@ -357,7 +359,32 @@ div[class*="__subtitle"] {
                 font-weight: normal;
                 font-family: 'Roboto';
                 font-size: 16px;
+                color: $primary-font__color;
             }
+        }
+    }
+}
+
+/**
+ * My Recipes
+ * --------------------------------------
+ */
+
+.my-recipes {
+    &__search input {
+        font-size: 16px;
+    }
+
+    .my-recipes-item {
+        &__name a {
+            font-family: 'Harman Simple';
+            font-size: 25px;
+            color: #fff;
+        }
+
+        &__options i {
+            font-size: 22px;
+            color: $primary-bg__color;
         }
     }
 }

@@ -1,0 +1,87 @@
+.profile-content {
+    .my-recipes {
+        &__search input {
+            width: 300px;
+            border: none;
+            padding-left: 15px;
+            height: 50px;
+            border: 1px solid #ccc;
+        }
+
+        &__list {
+            margin-top: 50px;
+
+            ul {
+                list-style: none;
+            }
+
+            .my-recipes-item {
+                $self: '.my-recipes-item';
+
+                position: relative;
+                cursor: pointer;
+                width: 220px;
+                height: 280px;
+                overflow: hidden;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+                box-shadow: 0px 3px 0.5rem rgba(0, 0, 0, 0.438);
+
+                &__image img {
+                    transition: 0.3s transform linear;
+	                will-change: transform;
+                    width: 220px;
+                    height: 280px;
+                    object-fit: cover;
+                }
+
+                &__overlay {
+                    @include d-flex($justify: center);
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: 0.3s opacity ease;
+                    background-color: rgba(0, 0, 0, 0.438);
+                }
+
+                &__options {
+                    @include d-flex($direction: row);
+                    margin-top: 15px;
+
+                    > div:not(:nth-last-child(1)) {
+                        margin-right: 10px;
+                    }
+
+                    i {
+                        @include d-flex($direction: row);
+                        align-items: center;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: rgba(255, 255, 255, 0.637);
+                        transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: #fff;
+                        }
+                    }
+                }
+
+                &:hover {
+                    img {
+                        transform-origin: center center;
+                        transform: scale(1.05);
+                    }
+
+                    #{ $self }__overlay {
+                        opacity: 1 !important;
+                    }
+                }
+            }
+        }
+    }
+}

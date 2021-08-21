@@ -36,15 +36,14 @@
         <link rel="preload" as="font" href="{{ asset('fonts/Harman-Simple-webfont.woff2') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('fonts/Harman-Sans-webfont.woff2') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('fonts/CenturySchoolbook-Regular-webfont.woff2') }}" crossOrigin="anonymous">
+        <link rel="preload" as="font" href="{{ asset('fonts/RobotoMono/RobotoMono-Regular.ttf') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('webfonts/fa-regular-400.woff2') }}" crossOrigin="anonymous">
         <link rel="preload" as="font" href="{{ asset('webfonts/fa-solid-900.woff2') }}" crossOrigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}" crossorigin="anonymous">
 
         <!-- Javascript -->
-        <script src="{{ asset('/js/jssor.js') }}">console.log('ok')</script>
         <script src="{{ asset('/js/jquery.js') }}">console.log('ok')</script>
-
-        <!-- Favicon -->
+        <script src="{{ asset('/js/jssor.js') }}">console.log('ok')</script>
     </head>
     <body>
         @include('layouts.header')
@@ -67,5 +66,6 @@
                 }
             }
         </script>
+        <script src="{{ asset('/js/app.js') }}"></script>
     </body>
 </html>

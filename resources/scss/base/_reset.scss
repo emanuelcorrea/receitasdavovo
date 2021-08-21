@@ -54,3 +54,14 @@ input[type='search']::-webkit-search-cancel-button {
 input[type='checkbox'] {
     display: none;
 }
+
+/* Change the white to any color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+    -webkit-text-size-adjust: unset;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
